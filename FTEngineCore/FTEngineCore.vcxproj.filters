@@ -40,9 +40,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="basiclighting.vert" />
-    <None Include="basiclighting.frag" />
-    <None Include="cube.vert" />
-    <None Include="cube.frag" />
+    <None Include="basiclightingv.glsl" />
+    <None Include="basiclightingf.glsl" />
+    <None Include="cubev.glsl" />
+    <None Include="cubef.glsl" />
   </ItemGroup>
 </Project>

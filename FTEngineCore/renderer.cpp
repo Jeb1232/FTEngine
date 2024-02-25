@@ -75,8 +75,8 @@ void RenderLoop(GLFWwindow* window)
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
 
-    Shader lightingShader("basiclighting.vert", "basiclighting.frag");
-    Shader lightCubeShader("cube.vert", "cube.frag");
+    Shader lightingShader("basiclightingv.glsl", "basiclightingf.glsl");
+    Shader lightCubeShader("cubev.glsl", "cubef.glsl");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
 // ------------------------------------------------------------------

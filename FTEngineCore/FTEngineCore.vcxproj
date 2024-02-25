@@ -166,10 +166,10 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="basiclighting.frag" />
-    <None Include="basiclighting.vert" />
-    <None Include="cube.frag" />
-    <None Include="cube.vert" />
+    <None Include="basiclightingf.glsl" />
+    <None Include="basiclightingv.glsl" />
+    <None Include="cubef.glsl" />
+    <None Include="cubev.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
