@@ -166,8 +166,12 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="basiclightingf.glsl" />
-    <None Include="basiclightingv.glsl" />
+    <None Include="DirectionalLightf.glsl" />
+    <None Include="DirectionalLightv.glsl" />
+    <None Include="Pointlightf.glsl" />
+    <None Include="Pointlightv.glsl" />
+    <None Include="Spotlightf.glsl" />
+    <None Include="Spotlightv.glsl" />
     <None Include="cubef.glsl" />
     <None Include="cubev.glsl" />
   </ItemGroup>

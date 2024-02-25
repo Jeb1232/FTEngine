@@ -40,9 +40,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="basiclightingv.glsl" />
-    <None Include="basiclightingf.glsl" />
+    <None Include="Spotlightv.glsl" />
+    <None Include="Spotlightf.glsl" />
     <None Include="cubev.glsl" />
     <None Include="cubef.glsl" />
+    <None Include="Pointlightv.glsl" />
+    <None Include="Pointlightf.glsl" />
+    <None Include="DirectionalLightv.glsl" />
+    <None Include="DirectionalLightf.glsl" />
   </ItemGroup>
 </Project>
