@@ -95,7 +95,8 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Owner\source\repos\FTEngine\Libraries\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -115,7 +116,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Owner\source\repos\FTEngine\Libraries\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -131,7 +133,8 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Owner\source\repos\FTEngine\Libraries\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -151,7 +154,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Owner\source\repos\FTEngine\Libraries\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -160,7 +164,15 @@
     <ClCompile Include="renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Animator.h" />
+    <ClInclude Include="AnimData.h" />
+    <ClInclude Include="assimp_glm_helpers.h" />
+    <ClInclude Include="Bone.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Model_Animation.h" />
     <ClInclude Include="renderer.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="stb_image.h" />
@@ -168,12 +180,28 @@
   <ItemGroup>
     <None Include="DirectionalLightf.glsl" />
     <None Include="DirectionalLightv.glsl" />
+    <None Include="FramebufferScreenf.glsl" />
+    <None Include="FramebufferScreenv.glsl" />
+    <None Include="grassf.glsl" />
+    <None Include="grassv.glsl" />
+    <None Include="NormalMapf.glsl" />
+    <None Include="NormalMapv.glsl" />
     <None Include="Pointlightf.glsl" />
     <None Include="Pointlightv.glsl" />
+    <None Include="Reflectivef.glsl" />
+    <None Include="Reflectivev.glsl" />
+    <None Include="ShadowMappingDepthf.glsl" />
+    <None Include="ShadowMappingDepthv.glsl" />
+    <None Include="simpletexturedf.glsl" />
+    <None Include="simpletexturedv.glsl" />
+    <None Include="skyboxf.glsl" />
+    <None Include="skyboxv.glsl" />
     <None Include="Spotlightf.glsl" />
     <None Include="Spotlightv.glsl" />
     <None Include="cubef.glsl" />
     <None Include="cubev.glsl" />
+    <None Include="teshshadowmapv.glsl" />
+    <None Include="testshadowmapf.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

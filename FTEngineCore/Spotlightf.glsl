@@ -39,13 +39,18 @@ void main()
     vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(light.position - FragPos);
     float diff = max(dot(norm, lightDir), 0.0);
-    vec3 diffuse = light.diffuse * diff * texture(material.diffuse, TexCoords).rgb;  
+    vec4 textureColor = texture(material.diffuse, TexCoords);
+    if(textureColor.a < 0.5){
+        discard;
+    }
+    vec3 diffuse = light.diffuse * diff * textureColor.rgb;  
     
     // specular
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 reflectDir = reflect(-lightDir, norm);  
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
-    vec3 specular = light.specular * spec * texture(material.specular, TexCoords).rgb;  
+    float specularColor = texture(material.specular, TexCoords).r;
+    vec3 specular = light.specular * spec * specularColor;  
     
     // spotlight (soft edges)
     float theta = dot(lightDir, normalize(-light.direction)); 

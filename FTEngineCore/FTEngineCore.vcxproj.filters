@@ -38,6 +38,30 @@
     <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model_Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="assimp_glm_helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Spotlightv.glsl" />
@@ -48,5 +72,21 @@
     <None Include="Pointlightf.glsl" />
     <None Include="DirectionalLightv.glsl" />
     <None Include="DirectionalLightf.glsl" />
+    <None Include="skyboxv.glsl" />
+    <None Include="skyboxf.glsl" />
+    <None Include="simpletexturedf.glsl" />
+    <None Include="simpletexturedv.glsl" />
+    <None Include="FramebufferScreenf.glsl" />
+    <None Include="FramebufferScreenv.glsl" />
+    <None Include="grassf.glsl" />
+    <None Include="grassv.glsl" />
+    <None Include="Reflectivef.glsl" />
+    <None Include="Reflectivev.glsl" />
+    <None Include="NormalMapv.glsl" />
+    <None Include="NormalMapf.glsl" />
+    <None Include="ShadowMappingDepthv.glsl" />
+    <None Include="ShadowMappingDepthf.glsl" />
+    <None Include="teshshadowmapv.glsl" />
+    <None Include="testshadowmapf.glsl" />
   </ItemGroup>
 </Project>
