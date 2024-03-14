@@ -13,6 +13,7 @@
 #include "Model.h"
 #include "Animator.h"
 #include "Model_Animation.h"
+#include"EditorUI.h"
 
 class FTRenderer {
 public:

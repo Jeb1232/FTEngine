@@ -5,7 +5,7 @@ int main()
 {
 	FTRenderer renderer;
 
-	renderer.CreateGLFWWindow(800, 600);
+	renderer.CreateGLFWWindow(1280, 720);
 
 	return 0;
 }

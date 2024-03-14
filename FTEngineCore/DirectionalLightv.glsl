@@ -42,5 +42,5 @@ void main()
     TangentViewPos  = TBN * viewPos;
     TangentFragPos  = TBN * FragPos;
     FragPosLightSpace = lightSpaceMatrix * vec4(FragPos, 1.0);
-    gl_Position = projection * view * vec4(FragPos, 1.0);
+    gl_Position = projection * view * model * vec4(FragPos, 1.0);
 }

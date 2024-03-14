@@ -60,10 +60,10 @@ public:
     void Draw(Shader& shader)
     {
         // bind appropriate textures
-        unsigned int diffuseNr = 1;
+        unsigned int diffuseNr = 0;
         unsigned int specularNr = 1;
-        unsigned int normalNr = 1;
-        unsigned int heightNr = 1;
+        unsigned int normalNr = 2;
+        unsigned int heightNr = 3;
         for (unsigned int i = 0; i < textures.size(); i++)
         {
             glActiveTexture(GL_TEXTURE0 + i); // active proper texture unit before binding

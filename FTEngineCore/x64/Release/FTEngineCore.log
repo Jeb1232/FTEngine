@@ -1,4 +1,7 @@
-﻿  renderer.cpp
+﻿  EditorUI.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+C:\Users\Owner\source\repos\FTEngine\Libraries\include\GLFW\glfw3.h(123): message : see previous definition of 'APIENTRY'
+C:\Users\Owner\source\repos\FTEngine\FTEngineCore\EditorUI.cpp(97,32): warning C4312: 'type cast': conversion from 'unsigned int' to 'ImTextureID' of greater size
 renderer.obj : warning LNK4006: "unsigned int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,bool)" (?TextureFromFile@@YAIPEBDAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N@Z) already defined in main.obj; second definition ignored
 renderer.obj : warning LNK4006: stbi_is_16_bit_from_callbacks already defined in main.obj; second definition ignored
 renderer.obj : warning LNK4006: stbi_is_16_bit_from_memory already defined in main.obj; second definition ignored
@@ -45,8 +48,8 @@ renderer.obj : warning LNK4006: stbi_image_free already defined in main.obj; sec
 renderer.obj : warning LNK4006: stbi_failure_reason already defined in main.obj; second definition ignored
 C:\Users\Owner\source\repos\FTEngine\x64\Release\FTEngineCore.exe : warning LNK4088: image being generated due to /FORCE option; image may not run
   Generating code
-  1 of 939 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+  0 of 3681 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    8 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   FTEngineCore.vcxproj -> C:\Users\Owner\source\repos\FTEngine\x64\Release\FTEngineCore.exe

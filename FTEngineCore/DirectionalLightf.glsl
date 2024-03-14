@@ -33,7 +33,7 @@ uniform Light light;
 
 float ShadowCalculation(vec4 fragPosLightSpace)
 {
-    // perform perspective divide
+        // perform perspective divide
     vec3 projCoords = fragPosLightSpace.xyz / fragPosLightSpace.w;
     // transform to [0,1] range
     projCoords = projCoords * 0.5 + 0.5;
@@ -69,6 +69,7 @@ float ShadowCalculation(vec4 fragPosLightSpace)
 
 void main()
 {
+    vec3 normalMap = texture(material.normal, TexCoords).rgb;
     // ambient
     vec3 ambient = light.ambient * texture(material.diffuse, TexCoords).rgb;
   	
@@ -85,13 +86,13 @@ void main()
     
     // specular
     vec3 viewDir = normalize(viewPos - FragPos);
-    vec3 reflectDir = reflect(-lightDir, norm);  
+    vec3 reflectDir = reflect(-lightDir, norm);
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
     float specularColor = texture(material.specular, TexCoords).r;
     vec3 specular = light.specular * spec * specularColor;
     
-    float shadow = ShadowCalculation(FragPosLightSpace);
+    //float shadow = ShadowCalculation(FragPosLightSpace);
         
-    vec3 result = (ambient + (1.0 - shadow) * diffuse + specular);
+    vec3 result = ambient + diffuse + specular;
     FragColor = vec4(result, 1.0);
 } 
